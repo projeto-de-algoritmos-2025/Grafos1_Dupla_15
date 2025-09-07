@@ -17,7 +17,7 @@
 
 | Matrícula   | Aluno                              |
 | ----------- | ---------------------------------- |
-|             | Gabriela Dourado França            |
+| 23/1026821  | Gabriela Dourado França            |
 | 21/1062651  | Arthur Miranda Suares              |
 </div>
 
