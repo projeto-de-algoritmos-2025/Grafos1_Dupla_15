@@ -38,6 +38,10 @@
   background-color: red;
 }
 
+.cell.pathFound {
+  background-color: yellow;
+}
+
 button {
   margin: 0 5px;
   padding: 5px 10px;

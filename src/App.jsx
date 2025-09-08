@@ -1,4 +1,5 @@
 import { useState } from "react";
+import labirintoController from "./controller.js"
 import "./App.css";
 
 export default function App() {
@@ -53,6 +54,9 @@ export default function App() {
         <button onClick={() => setMode("start")}>Início (verde)</button>
         <button onClick={() => setMode("end")}>Fim (vermelho)</button>
         <button onClick={generateRandomMaze}>Gerar Labirinto Aleatório</button>
+        <button onClick={() => labirintoController.findPath(grid, setGrid, size)}>
+          Encontrar Caminho
+        </button>
       </div>
 
       <div className="grid">
@@ -61,13 +65,11 @@ export default function App() {
             <div
               key={`${i}-${j}`}
               className={`cell ${
-                cell === 1
-                  ? "wall"
-                  : cell === 2
-                  ? "start"
-                  : cell === 3
-                  ? "end"
-                  : "path"
+                cell === 1 ? "wall"
+                : cell === 2 ? "start"
+                : cell === 3 ? "end"
+                : cell === 4 ? "pathFound"
+                : "path"
               }`}
               onClick={() => handleClick(i, j)}
             />
