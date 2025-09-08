@@ -1,8 +1,11 @@
 const directions = [
-  [1, 0], [-1, 0], [0, 1], [0, -1] // baixo, cima, direita, esquerda
+  [1, 0], 
+  [-1, 0],
+  [0, 1], 
+  [0, -1] // baixo, cima, direita, esquerda
 ];
 
-// 🔹 Função para localizar início/fim
+//Função para localizar início/fim
 const findPoint = (grid, value) => {
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[0].length; j++) {
@@ -12,11 +15,32 @@ const findPoint = (grid, value) => {
   return null;
 };
 
-// 🔹 BFS recebe grid e size como parâmetros
+//BFS recebe grid e size como parâmetros
+
+/*
+  A ideia por trás dessa bfs é um pouco diferente. É mais 
+  parecida com o FLOOD FILL por considerar o grafo como implícito.
+  Ela sempre vai ter um ponto inicial que é o marcado pelo
+  usuário. Por isso "findPoint(grid, 2);" que é a marcação 
+  de início.
+
+  A partir do ponto inicial, a busca começa vendo em quais direções
+  é possível seguir e vai adicionando o nó do qual se sai como parent
+  pra guardar o caminho. A movimentação é feita adicionando 1 no eixo x
+  ouu y dependendo se o caminho é ou não uma parede. Se a busca conseguir
+  chegar no fim, ela retornará um o vetor de pontos [x,y] que foi salvo no 
+  parent só que invertido pra conseguir fazer o caminho de volta colorindo.
+  E se a busca não conseguir a partir do ponto inicial chegar no ponto final,
+  então o labirinto é sem solução e a busca retorna null.
+
+  OBS: O vetor parent é invertido só porque quando adiciona o pŕoximo nó que 
+  foi visitado nele, ele é adicionado na frente do anterior.
+*/
 const bfs = (grid, size) => {
   const start = findPoint(grid, 2);
   const end = findPoint(grid, 3);
-  if (!start || !end) return null;
+
+  if (!start || !end) return null; //Se nem o início nem o fim foram marcados, não tem como achar o caminho
 
   const queue = [start];
   const visited = new Set([start.toString()]);

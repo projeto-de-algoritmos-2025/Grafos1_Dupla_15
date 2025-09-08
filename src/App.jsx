@@ -9,15 +9,13 @@ export default function App() {
   );
 
   const [mode, setMode] = useState("wall"); 
-  // "wall" = parede, "start" = início, "end" = fim
-
+  
   const handleClick = (row, col) => {
-    const newGrid = grid.map((r) => [...r]); // cópia profunda
+    const newGrid = grid.map((r) => [...r]); 
 
     if (mode === "wall") {
-      newGrid[row][col] = newGrid[row][col] === 1 ? 0 : 1; // alterna parede
+      newGrid[row][col] = newGrid[row][col] === 1 ? 0 : 1; 
     } else if (mode === "start") {
-      // limpa outro ponto de início
       for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
           if (newGrid[i][j] === 2) newGrid[i][j] = 0;
@@ -25,7 +23,6 @@ export default function App() {
       }
       newGrid[row][col] = 2;
     } else if (mode === "end") {
-      // limpa outro ponto de fim
       for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
           if (newGrid[i][j] === 3) newGrid[i][j] = 0;
@@ -37,7 +34,7 @@ export default function App() {
     setGrid(newGrid);
   };
 
-  // 🔹 Gera labirinto aleatório
+  // Essa função gera labirinto aleatório
   const generateRandomMaze = () => {
     const newGrid = Array.from({ length: size }, () =>
       Array.from({ length: size }, () => (Math.random() < 0.3 ? 1 : 0)) // 30% chance de parede
