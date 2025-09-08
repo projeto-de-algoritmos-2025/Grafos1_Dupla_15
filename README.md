@@ -21,20 +21,69 @@
 | 21/1062651  | Arthur Miranda Suares              |
 </div>
 
-## Sobre 
+## 📌 Entrega 1
 
+### Sobre
 
-## Screenshots
+Este projeto consiste na modelagem e resolução de um **labirinto** utilizando **grafos** e algoritmos de busca. Cada célula é tratada como um vértice, e as conexões entre células vizinhas como arestas.
 
-## Instalação 
-**Linguagem**:
+Foram aplicados os seguintes algoritmos:
 
-## Uso 
+* **Flood Fill**: percorre todas as células conectadas, equivalente a uma busca em largura ou profundidade.
+* **BFS (Busca em Largura)**: encontra sempre o **caminho mais curto** da origem ao destino.
 
-## Apresentação 
+---
 
+### Instalação
 
-## Outros 
+1. Clone este repositório:
+
+   ```bash
+   git clone <url-do-repositorio>
+   cd <nome-da-pasta>
+   ```
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+3. Execute o servidor local:
+
+   ```bash
+   npm run dev
+   ```
+4. Acesse pelo navegador:
+
+   ```
+   http://localhost:5173/
+   ```
+
+---
+
+### Linguagem
+
+* **JavaScript** (React + Vite)
+* **CSS** para estilização
+
+---
+
+### Uso
+
+* Executar `npm run dev` para abrir o labirinto.
+* O usuário pode observar o funcionamento dos algoritmos de busca sobre o grafo representado pelo labirinto.
+
+---
+
+### Apresentação
+
+Vídeo de até 5 minutos explicando:
+
+* A modelagem do labirinto como grafo.
+* A aplicação de Flood Fill e DFS.
+* Demonstração no front-end interativo.
+
+---
+
   
 
 
