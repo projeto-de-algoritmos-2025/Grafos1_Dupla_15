@@ -34,6 +34,18 @@ Foram aplicados os seguintes algoritmos:
 
 ---
 
+### Apresentação
+
+Vídeo de até 5 minutos explicando:
+
+* A modelagem do labirinto como grafo.
+* A aplicação dos conceitos do Flood Fill de identificar um grafo implícito e BFS.
+* Demonstração no front-end interativo.
+
+[---> Clique aqui para ver a apresentação <---](https://unbbr.sharepoint.com/:v:/s/ProjetodeAlgoritmos-Discord2/ETWixiobFSJKmg75hLsWYWUBWMayh-dz4hK5zpmdcyT07g?e=UCOifY&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+---
+
 ### Instalação
 
 1. Clone este repositório:
@@ -71,16 +83,6 @@ Foram aplicados os seguintes algoritmos:
 
 * Executar `npm run dev` para abrir o labirinto.
 * O usuário pode observar o funcionamento dos algoritmos de busca sobre o grafo representado pelo labirinto.
-
----
-
-### Apresentação
-
-Vídeo de até 5 minutos explicando:
-
-* A modelagem do labirinto como grafo.
-* A aplicação de Flood Fill e DFS.
-* Demonstração no front-end interativo.
 
 ---
 
